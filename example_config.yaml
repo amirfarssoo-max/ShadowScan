@@ -1,0 +1,64 @@
+# ShadowScan Configuration Example
+# Usage: python shadowscan.py https://target.com -c example_config.yaml
+
+# ============ Scan Mode & Depth ============
+mode: standard                    # fast, standard, deep, full
+max_pages: 100                   # Maximum pages to crawl
+max_depth: 2                     # Maximum crawl depth
+crawl_mode: fast                 # fast, normal, thorough
+
+# ============ Performance ============
+threads: 8                       # Number of worker threads
+timeout: 15                      # Request timeout (seconds)
+delay: 0.05                      # Delay between requests
+rate_limit: 100                  # Requests per second
+
+# ============ Crawler Settings ============
+crawl: true                      # Enable crawling
+exclude_paths:
+  - /logout
+  - /api/health
+  - /static/*
+  - /*.pdf
+
+include_paths:
+  - /api/*
+  - /admin
+
+# ============ Authentication ============
+# Uncomment to enable
+# login_url: https://example.com/login
+# username: admin
+# password: password123
+# auth_token: eyJ0eXAiOiJKV1QiLCJhbGc...
+# auth_type: bearer              # bearer, basic, digest
+
+# ============ Network ============
+# proxy: http://127.0.0.1:8080
+verify_ssl: true                 # Set to false for self-signed certs
+follow_redirects: true           # Follow HTTP redirects
+
+# Cookies (key: value format)
+# cookies:
+#   PHPSESSID: abc123def456
+#   session: xyz789
+
+# Custom Headers (JSON format)
+# custom_headers:
+#   X-Custom-Header: "value"
+#   Authorization: "Bearer token"
+
+# ============ Scope ============
+scope_domains:
+  - example.com
+  - api.example.com
+  - staging.example.com
+
+# ============ Output ============
+report_name: scan_example       # Report filename (without extension)
+output_format: both             # html, json, or both
+silent: false                   # Suppress console output
+verbose: false                  # Enable debug verbose output
+
+# ============ Safety ============
+safe_mode: true                 # Don't test dangerous payloads
