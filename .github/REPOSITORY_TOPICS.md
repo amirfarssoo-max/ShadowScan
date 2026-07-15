@@ -1,0 +1,17 @@
+topics:
+  - penetration-testing
+  - web-security
+  - vulnerability-scanner
+  - cybersecurity
+  - security-tools
+  - termux
+  - linux
+  - async-python
+  - plugin-system
+  - owasp
+  - cwe
+  - bug-bounty
+  - security-research
+  - web-application-security
+  - automated-testing
+  - python3
